@@ -1,0 +1,99 @@
+{
+    "modules-left": ["custom/power","custom/mpris"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["tray", "bluetooth", "network", "battery", "pulseaudio", "clock"],
+
+    "custom/power": {
+        "format" : "⭘ ",
+        "tooltip": false,
+        "on-click": "hyprlock",
+    },
+
+    "custom/mpris": {
+		"exec": "python3 -u ~/.config/akari/scrolling-mpris.py",
+		"format": "{text}",
+		"return-type": "json",
+		"on-click": "playerctl play-pause"
+	},
+
+    "mpris": {
+        "players": ["firefox"],
+        "format": "{title} — {artist}",
+        "max-length": 50,
+        "tooltip": true,
+        "status": {
+            "playing": " {title}",
+            "paused": " {title}"
+        },
+    },
+
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "warp-on-scroll": false,
+        "format": "{name}",
+        "cursor": true,
+    },
+
+    "tray": {
+        "spacing": 10,
+	"icon-size": 20,
+	"cursor": true,
+    },
+
+    "bluetooth": {
+        "format": "󰂯",
+        "format-disabled": "󰂲",
+        "format-connected": "󰂱",
+    },
+    
+    "network": {
+    	"format-wifi": "📶 {essid} ({signalStrength}%)",
+    	"format-ethernet": "🖧 {ifname}",
+    	"format-disconnected": "🚫 Disconnected",
+    	"tooltip": true
+    },
+
+    "battery": {
+        "states": {
+            "good": 85,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-full": "{icon} {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-alt": "{icon} {capacity}%",
+        "format-icons": [" ", " ", " ", " ", " "],
+        "tooltip-format": "{time}",
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "  {volume}%",
+        "format-bluetooth": " {volume}%",
+        "format-bluetooth-muted": "  {volume}%",
+        "format-icons": {
+            "headphone": " ",
+            "headset": " ",
+            "default": [" "],
+        },
+        "on-click": "pavucontrol",
+    },
+
+    "clock": {
+        "format": "{:%H:%M}",
+        "tooltip-format": "<span size='15000'><tt>{calendar}</tt></span>",
+        "calendar": {
+            "mode": "month",
+            "format": {
+                "months": "<span color='#F5C2E7'><b>{}</b></span>",
+                "weekdays": "<span color='#89B4FA'><b>{}</b></span>",
+                "days": "<span color='#CDD6F4'><b>{}</b></span>",
+                "today": "<span color='#F9E2AF'><b>{}</b></span>",
+            }
+        },
+    }
+}
