@@ -1,4 +1,5 @@
 {
+    "font": "JetBrainsMono Nerd Font, Noto Color Emoji 10",
     "modules-left": ["custom/power","custom/mpris"],
     "modules-center": ["hyprland/workspaces"],
     "modules-right": ["tray", "bluetooth", "network", "battery", "pulseaudio", "clock"],

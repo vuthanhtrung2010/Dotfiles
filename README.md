@@ -20,3 +20,32 @@ This repository includes configuration for:
 ├── README.md       # This file
 └── waybar
 ```
+
+Needed dependencies:
+```
+xdg-desktop-portal
+xdg-desktop-portal-gnome
+xdg-desktop-portal-hyprland
+mako
+hyprlock
+hypridle
+hyprpaper
+hyprland-monitor-attached
+discord
+fcitx5
+fcitx5-configtool
+fcitx5-unikey
+flameshot
+ulauncher
+rofi
+nautilus
+waybar
+brightnessctl
+ttf-segoe-ui-variable
+ttf-jetbrains-mono-nerd
+otf-font-awesome
+ttf-font-awesome
+noto-fonts-emoji
+gnome-keyring
+libsecret
+```
