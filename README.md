@@ -51,4 +51,9 @@ libsecret
 wl-clipboard
 clipvault
 vnstat
+ttf-meslo-nerd-font-powerlevel10k
+zsh
 ```
+
+Use powerlevel10k/powerlevel10k for zsh theme
+See https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#oh-my-zsh for installation instructions
