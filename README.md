@@ -33,6 +33,7 @@ mako
 hyprlock
 hypridle
 hyprpaper
+hyprsunset
 hyprland-monitor-attached
 discord
 fcitx5
