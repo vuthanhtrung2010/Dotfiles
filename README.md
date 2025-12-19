@@ -57,6 +57,7 @@ clipvault
 vnstat
 ttf-meslo-nerd-font-powerlevel10k
 zsh
+pavucontrol
 ```
 
 ## ⚙️ Post Installation
@@ -71,3 +72,9 @@ git config --global credential.helper /usr/lib/git-core/git-credential-libsecret
 ## Notes
 - For fcitx5 sometimes it can't use Windows + Space toggle language, you can fix it by uncomment the binding SUPER + Space in the hyprland config file.
 - For flameshot fractional scaling issue, you can fix it by uncommenting the line that sets QT_SCALE_FACTOR on hyprland config file.
+
+## Optional Dependencies
+```
+obs-studio
+v4l2loopback-dkms
+```
