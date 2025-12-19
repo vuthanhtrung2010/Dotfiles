@@ -48,4 +48,6 @@ ttf-font-awesome
 noto-fonts-emoji
 gnome-keyring
 libsecret
+wl-clipboard
+clipvault
 ```
