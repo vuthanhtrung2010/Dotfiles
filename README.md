@@ -50,4 +50,5 @@ gnome-keyring
 libsecret
 wl-clipboard
 clipvault
+vnstat
 ```
