@@ -21,6 +21,9 @@ This repository includes configuration for:
 └── waybar
 ```
 
+## 🚀 Installation
+Before installing those dependencies, you should remove default things like dolphin that come with default arch hyprland setup... then install dependencies in the list below.
+
 Needed dependencies:
 ```
 xdg-desktop-portal
@@ -55,5 +58,15 @@ ttf-meslo-nerd-font-powerlevel10k
 zsh
 ```
 
+## ⚙️ Post Installation
 Use powerlevel10k/powerlevel10k for zsh theme
 See https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#oh-my-zsh for installation instructions
+
+For github credential strong, use GNome Keyring + libsecret:
+```bash
+git config --global credential.helper /usr/lib/git-core/git-credential-libsecret
+```
+
+## Notes
+- For fcitx5 sometimes it can't use Windows + Space toggle language, you can fix it by uncomment the binding SUPER + Space in the hyprland config file.
+- For flameshot fractional scaling issue, you can fix it by uncommenting the line that sets QT_SCALE_FACTOR on hyprland config file.
