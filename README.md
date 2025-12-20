@@ -60,6 +60,11 @@ zsh
 pavucontrol
 ```
 
+For `vnstat` setup, after installation, run:
+```bash
+sudo systemctl enable --now vnstat
+```
+
 ## ⚙️ Post Installation
 ### Git Configuration
 For github credential strong, use GNome Keyring + libsecret:
@@ -97,5 +102,19 @@ Then add `zsh-syntax-highlighting` to the plugins list in `~/.zshrc`.
 obs-studio
 v4l2loopback-dkms
 termius
+warp-cli
+tailscale
 thunderbird
 ```
+
+For `warp-cli` setup, after installation, run:
+```bash
+sudo systemctl enable --now warp-svc
+```
+
+Then register your device:
+```bash
+warp-cli register <team-name>
+```
+
+`<team-name>` can be found in your warp dashboard. It is optional to include in for network routing.
