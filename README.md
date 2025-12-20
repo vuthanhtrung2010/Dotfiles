@@ -78,4 +78,5 @@ git config --global credential.helper /usr/lib/git-core/git-credential-libsecret
 obs-studio
 v4l2loopback-dkms
 termius
+thunderbird
 ```
