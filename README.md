@@ -61,17 +61,36 @@ pavucontrol
 ```
 
 ## ⚙️ Post Installation
-Use powerlevel10k/powerlevel10k for zsh theme
-See https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#oh-my-zsh for installation instructions
-
+### Git Configuration
 For github credential strong, use GNome Keyring + libsecret:
 ```bash
 git config --global credential.helper /usr/lib/git-core/git-credential-libsecret
 ```
 
+### Oh My Zsh + Powerlevel10k + Zsh Plugins
+Install Oh My Zsh by following the command in their official website: https://ohmyz.sh/#install
+
+Use powerlevel10k/powerlevel10k for zsh theme
+See https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#oh-my-zsh for installation instructions
+
+Also for zsh-autosuggestions, to install do:
+```bash
+git clone https://github.com/zsh-users/zsh-autosuggestions \
+${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
+
+Open `~/.zshrc` and add `zsh-autosuggestions` to the plugins list (find where `plugins=(...)` is located).
+
+Same for zsh-syntax-highlighting:
+```bash
+git clone https://github.com/zsh-users/zsh-syntax-highlighting \
+${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+Then add `zsh-syntax-highlighting` to the plugins list in `~/.zshrc`.
+
 ## Notes
 - For fcitx5 sometimes it can't use Windows + Space toggle language, you can fix it by uncomment the binding SUPER + Space in the hyprland config file.
-- For flameshot fractional scaling issue, you can fix it by uncommenting the line that sets QT_SCALE_FACTOR on hyprland config file.
+- For Flameshot fractional scaling issue, you can fix it by uncommenting the line that sets QT_SCALE_FACTOR on hyprland config file.
 
 ## Optional Dependencies
 ```
