@@ -125,3 +125,38 @@ warp-cli register <team-name>
 ```
 -Dawt.toolkit.name=WLToolkit
 ```
+
+## Secure boot setup
+This guide is for `systemd-boot`.
+
+To prevent some tampering we use secure boot on Arch, it was pretty easy, you can use your own key.
+
+1. Enable advanced mode on BIOS
+2. Boot Configuration -> Expert Key Management -> Custom Mode -> **Enable**
+3. Scroll down and click "Delete all Keys" -> Confirm.
+4. Enable Secure boot above if not enabled.
+5. Reboot
+
+```bash
+# Install sbctl (if you not installed it)
+sudo pacman -S --needed sbctl
+
+# Create your keys
+sudo sbctl create-keys
+
+# Check status
+sudo sbctl status
+
+# Enroll your keys (the -m flag keeps Microsoft keys you enabled)
+sudo sbctl enroll-keys -m
+
+# Sign your systemd-boot files
+sudo sbctl sign -s -o /usr/lib/systemd/boot/efi/systemd-bootx64.efi.signed /usr/lib/systemd/boot/efi/systemd-bootx64.efi
+sudo sbctl sign -s /boot/vmlinuz-linux
+
+# Verify everything
+sudo sbctl verify
+# Make sure nothing shows as "✗ Not Signed" if has then sign it.
+```
+
+Reboot to test again.
