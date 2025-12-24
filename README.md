@@ -118,3 +118,10 @@ warp-cli register <team-name>
 ```
 
 `<team-name>` can be found in your warp dashboard. It is optional to include in for network routing.
+
+# Fractional Scaling issue:
+- Flameshot: Already tell the solution on above note.
+- JetBrains IDEs: Go to `Help > Edit Custom VM Options` append to the opened VM Options file the content below and restart the IDE:
+```
+-Dawt.toolkit.name=WLToolkit
+```
