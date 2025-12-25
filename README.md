@@ -58,6 +58,7 @@ vnstat
 ttf-meslo-nerd-font-powerlevel10k
 zsh
 pavucontrol
+pacman-contrib
 ```
 
 For `vnstat` setup, after installation, run:
@@ -136,6 +137,7 @@ To prevent some tampering we use secure boot on Arch, it was pretty easy, you ca
 3. Scroll down and click "Delete all Keys" -> Confirm.
 4. Enable Secure boot above if not enabled.
 5. Reboot
+6. Run the following commands:
 
 ```bash
 # Install sbctl (if you not installed it)
@@ -159,4 +161,18 @@ sudo sbctl verify
 # Make sure nothing shows as "✗ Not Signed" if has then sign it.
 ```
 
-Reboot to test again.
+7. Reboot to test again. If boot success then you are success.
+
+## Ungoogled Chromium
+### Spotify incompat issue:
+Install Widevine CDM, follow the docs [here](https://ungoogled-software.github.io/ungoogled-chromium-wiki/faq#how-do-i-install-widevine-cdm)
+
+### Chrome search engine
+1. Go to `chrome://settings/searchEngines`
+2. Click the **Add** button next to "Other search engines."
+3. In the **Search engine** input box, enter "Google."
+4. In the **Keyword input** box, enter `google.com`.
+5. In the **URL with %s in place of query** nput box, enter `https://www.google.com/search?q=%s&{google:RLZ}{google:originalQueryForSuggestion}{google:assistedQueryStats}{google:searchFieldtrialParameter}{google:iOSSearchLanguage}{google:prefetchSource}{google:searchClient}{google:sourceId}{google:contextualSearchVersion}ie={inputEncoding}`.
+6. In the **Suggestions URL with %s in place of query input box**, enter `https://www.google.com/complete/search?client=chrome&q=%s`
+7. Click **Save** button.
+8. Make it **Default**.
