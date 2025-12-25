@@ -22,7 +22,7 @@ This repository includes configuration for:
 ```
 
 ## 🚀 Installation
-Before installing those dependencies, you should remove default things like dolphin that come with default arch hyprland setup... then install dependencies in the list below.
+Before installing those dependencies, you should remove default things like dolphin that come with default arch hyprland setup (like Firefox, Dolphin, KDE Related things)... then install dependencies in the list below.
 
 Needed dependencies:
 ```
@@ -59,6 +59,7 @@ ttf-meslo-nerd-font-powerlevel10k
 zsh
 pavucontrol
 pacman-contrib
+ungoogled-chromium-bin
 ```
 
 For `vnstat` setup, after installation, run:
@@ -126,8 +127,19 @@ warp-cli register <team-name>
 ```
 -Dawt.toolkit.name=WLToolkit
 ```
+- Discord, Termius: Add flags `--enable-features=UseOzonePlatform --ozone-platform=wayland`.
 
-## Secure boot setup
+For applying flags to rofi, for e.g. with termius:
+```bash
+# Copy the file
+cp /usr/share/applications/termius.desktop ~/.local/share/applications/
+# Edit it
+# Replace: Exec=termius %U
+# With: Exec=termius --enable-features=UseOzonePlatform --ozone-platform=wayland %U
+vim ~/.local/share/applications/termius.desktop
+```
+
+# Secure boot setup
 This guide is for `systemd-boot`.
 
 To prevent some tampering we use secure boot on Arch, it was pretty easy, you can use your own key.
@@ -163,7 +175,7 @@ sudo sbctl verify
 
 7. Reboot to test again. If boot success then you are success.
 
-## Ungoogled Chromium
+## Ungoogled Chromium extra setup
 ### Spotify incompat issue:
 Install Widevine CDM, follow the docs [here](https://ungoogled-software.github.io/ungoogled-chromium-wiki/faq#how-do-i-install-widevine-cdm)
 
