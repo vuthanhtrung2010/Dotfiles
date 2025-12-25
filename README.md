@@ -184,7 +184,13 @@ Install Widevine CDM, follow the docs [here](https://ungoogled-software.github.i
 2. Click the **Add** button next to "Other search engines."
 3. In the **Search engine** input box, enter "Google."
 4. In the **Keyword input** box, enter `google.com`.
-5. In the **URL with %s in place of query** nput box, enter `https://www.google.com/search?q=%s&{google:RLZ}{google:originalQueryForSuggestion}{google:assistedQueryStats}{google:searchFieldtrialParameter}{google:iOSSearchLanguage}{google:prefetchSource}{google:searchClient}{google:sourceId}{google:contextualSearchVersion}ie={inputEncoding}`.
-6. In the **Suggestions URL with %s in place of query input box**, enter `https://www.google.com/complete/search?client=chrome&q=%s`
+5. In the **URL with %s in place of query** input box, enter
+```
+https://www.google.com/search?q=%s&{google:RLZ}{google:originalQueryForSuggestion}{google:assistedQueryStats}{google:searchFieldtrialParameter}{google:iOSSearchLanguage}{google:prefetchSource}{google:searchClient}{google:sourceId}{google:contextualSearchVersion}ie={inputEncoding}
+```
+6. In the **Suggestions URL with %s in place of query input box**, enter
+```
+https://www.google.com/complete/search?client=chrome&q=%s
+```
 7. Click **Save** button.
 8. Make it **Default**.
