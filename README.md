@@ -175,22 +175,23 @@ sudo sbctl verify
 
 7. Reboot to test again. If boot success then you are success.
 
-## Ungoogled Chromium extra setup
-### Spotify incompat issue:
+# Ungoogled Chromium extra setup
+## Spotify incompat issue:
 Install Widevine CDM, follow the docs [here](https://ungoogled-software.github.io/ungoogled-chromium-wiki/faq#how-do-i-install-widevine-cdm)
 
-### Chrome search engine
+## Chrome search engine
 1. Go to `chrome://settings/searchEngines`
 2. Click the **Add** button next to "Other search engines."
 3. In the **Search engine** input box, enter "Google."
 4. In the **Keyword input** box, enter `google.com`.
 5. In the **URL with %s in place of query** input box, enter
-```
-https://www.google.com/search?q=%s&{google:RLZ}{google:originalQueryForSuggestion}{google:assistedQueryStats}{google:searchFieldtrialParameter}{google:iOSSearchLanguage}{google:prefetchSource}{google:searchClient}{google:sourceId}{google:contextualSearchVersion}ie={inputEncoding}
-```
+    ```
+    https://www.google.com/search?q=%s&{google:RLZ}{google:originalQueryForSuggestion}{google:assistedQueryStats}{google:searchFieldtrialParameter}{google:iOSSearchLanguage}{google:prefetchSource}{google:searchClient}{google:sourceId}{google:contextualSearchVersion}ie={inputEncoding}
+    ```
 6. In the **Suggestions URL with %s in place of query input box**, enter
-```
-https://www.google.com/complete/search?client=chrome&q=%s
-```
+    ```
+    https://www.google.com/complete/search?client=chrome&q=%s
+    ```
 7. Click **Save** button.
 8. Make it **Default**.
+9. Go to `chrome://settings/syncSetup` and enable **Improve search suggestions** setting to have search suggestion
