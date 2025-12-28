@@ -195,3 +195,6 @@ Install Widevine CDM, follow the docs [here](https://ungoogled-software.github.i
 7. Click **Save** button.
 8. Make it **Default**.
 9. Go to `chrome://settings/syncSetup` and enable **Improve search suggestions** setting to have search suggestion
+
+## Some good extensions
+- [Always active Window](https://chromewebstore.google.com/detail/always-active-window-alwa/ehllkhjndgnlokhomdlhgbineffifcbj): Spoof the visibility state event and more.
