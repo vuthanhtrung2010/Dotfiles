@@ -107,6 +107,8 @@ termius
 warp-cli
 tailscale
 thunderbird
+vlc
+vlc-plugins-all
 ```
 
 For `warp-cli` setup, after installation, run:
